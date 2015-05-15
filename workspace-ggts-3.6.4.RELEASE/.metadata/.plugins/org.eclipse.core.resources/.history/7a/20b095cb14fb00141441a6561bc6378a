@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>Current Projects</title>
+</head>
+<body>
+	<table border="1">
+		<g:each>
+			<tr>
+			</tr>
+		</g:each>
+	</table>
+</body>
+</html>

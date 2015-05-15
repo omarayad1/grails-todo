@@ -1,0 +1,6 @@
+package projecttracker
+
+class ProjectController {
+	def scaffold = true;
+	
+}

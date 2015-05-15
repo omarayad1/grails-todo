@@ -1,0 +1,6 @@
+package projecttracker
+
+class ProjectController {
+	static scaffold = true;
+	
+}

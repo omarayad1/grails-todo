@@ -1,0 +1,16 @@
+package projecttracker
+
+class ListProjectsController {
+
+	def index = {
+		redirect (action:overdue)
+	}
+    def current = { 
+		def projectName = "Project Tracker"
+		def dueDate = "15/4/2015"
+		[project:projectName, date:dueDate]
+	}
+	def overdue = {
+		render "Finish the assignment!"
+	}
+}

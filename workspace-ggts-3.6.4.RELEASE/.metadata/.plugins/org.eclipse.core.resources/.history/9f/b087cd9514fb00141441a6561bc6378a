@@ -1,0 +1,8 @@
+<html>
+<head>
+	<title>Current Projects</title>
+</head>
+<body>
+${allProjects.name } ${allProjects.description } ${allProjects.dueDate }
+</body>
+</html>

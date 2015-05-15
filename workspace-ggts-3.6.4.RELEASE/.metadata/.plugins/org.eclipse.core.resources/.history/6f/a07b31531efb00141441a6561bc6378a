@@ -1,0 +1,13 @@
+package projecttracker
+
+class Project {
+	String name;
+	String description;
+	Date dueDate;
+	int owner_id;
+	static belongsTo = [Owner:EndUser]
+	static hasMany = [tasks:Task]
+    static constraints = {
+		
+    }
+}

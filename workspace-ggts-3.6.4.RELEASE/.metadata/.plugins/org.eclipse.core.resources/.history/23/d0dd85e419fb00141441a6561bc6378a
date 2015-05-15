@@ -1,0 +1,9 @@
+package projecttracker
+
+class EndUser {
+	String userName;
+	String password;
+	String fullName;
+    static constraints = {
+    }
+}
