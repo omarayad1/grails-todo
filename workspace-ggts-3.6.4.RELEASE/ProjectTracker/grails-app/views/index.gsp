@@ -3,7 +3,43 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
+		<script src="js/jquery.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
 		<style type="text/css" media="screen">
+			a {
+				color: #fff !important;
+				text-decoration: none !important;
+			}
+			.btn {
+			  color: #fff !important;
+			  background-color: #d9534f !important;
+			  border-color: #d43f3a !important;
+			  display: inline-block !important;
+			  padding: 6px 12px !important;
+			  margin-bottom: 0 !important;
+			  font-size: 14px !important;
+			  font-weight: 400 !important;
+			  line-height: 1.42857143 !important;
+			  text-align: center !important;
+			  white-space: nowrap !important;
+			  vertical-align: middle !important;
+			  -ms-touch-action: manipulation !important;
+			  touch-action: manipulation !important;
+			  cursor: pointer !important;
+			  -webkit-user-select: none !important;
+			  -moz-user-select: none !important;
+			  -ms-user-select: none !important;
+			  user-select: none !important;
+			  background-image: none !important;
+			  border: 1px solid transparent !important;
+			  border-radius: 4px !important;
+			  -webkit-appearance: button !important;
+			  text-transform: none !important;
+			  overflow: visible !important;
+			  margin: 0 !important;
+  			  font: inherit !important;
+  			  box-sizing: border-box !important;
+			}
 			#status {
 				background-color: #eee;
 				border: .2em solid #fff;
@@ -81,40 +117,23 @@
 		</style>
 	</head>
 	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
-
-			<div id="controller-list" role="navigation">
+		<div style="text-align:center" id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
+					<br>
+					<br>
 				<ul>
+				<!--  
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+						<li class="controller" style="list-style-type: none;"><button class="btn btn-danger"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></button></li>
+																				 
 					</g:each>
+				-->
+						<li class="controller" style="list-style-type: none;"><button class="btn btn-danger"><a href="/ProjectTracker/endUser/index">projecttracker.EndUserController</a></button></li>														 
+					
+						<li class="controller" style="list-style-type: none;"><button class="btn btn-danger"><a href="/ProjectTracker/project/index">projecttracker.ProjectController</a></button></li>
+					
+						<li class="controller" style="list-style-type: none;"><button class="btn btn-danger"><a href="/ProjectTracker/task/index">projecttracker.TaskController</a></button></li>
+					
 				</ul>
 			</div>
 		</div>
