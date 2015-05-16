@@ -8,13 +8,20 @@ import spock.lang.Specification
  */
 @TestFor(ProjectController)
 class ListProjectsControllerSpec extends Specification {
+    void "test if the controller scaffolds correctly"() {
+    	when:
+    	controller.dump()
 
-    def setup() {
+    	then:
+    	controller.scaffold == true
     }
+    void "test if the controller has its name set correctly"() {
+    	when:
+    	controller.dump()
 
-    def cleanup() {
+    	then:
+    	controller.controllerName == "project"
     }
-
-    void "test something"() {
-    }
+    
 }
+
