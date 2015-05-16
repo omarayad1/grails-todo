@@ -8,13 +8,18 @@ import spock.lang.Specification
  */
 @TestFor(EndUserController)
 class EndUserControllerSpec extends Specification {
+    void "test if the controller scaffolds correctly"() {
+    	when:
+    	controller.dump()
 
-    def setup() {
+    	then:
+    	controller.scaffold == true
     }
+    void "test if the controller has its name set correctly"() {
+    	when:
+    	controller.dump()
 
-    def cleanup() {
-    }
-
-    void "test something"() {
+    	then:
+    	controller.controllerName == "endUser"
     }
 }

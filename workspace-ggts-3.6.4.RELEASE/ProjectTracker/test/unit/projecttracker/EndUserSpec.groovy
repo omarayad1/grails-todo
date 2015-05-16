@@ -8,13 +8,13 @@ import spock.lang.Specification
  */
 @TestFor(EndUser)
 class EndUserSpec extends Specification {
-
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "test something"() {
-    }
+    	def users = [
+    		new EndUser(username: "ayad", password: "batee5", fullName: "Omar H. Ayad"),
+    		new EndUser(username: "loufes", password: "anotherBatee5", fullName: "Youssef Rehab"),
+    		new EndUser(username: "don", password: "anotherAnotherBatee5", fullName: "Omar Tarek")
+    	]
+    	users*.save()
+    	assertEquals 3, EndUser.list().size()
+    } 
 }
